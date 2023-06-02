@@ -1,0 +1,11 @@
+version: "3"
+services:
+  shiori:
+    image: ghcr.io/go-shiori/shiori
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    environment:
+      - SHIORI_DIR=/data
+    volumes:
+      - data:/data
